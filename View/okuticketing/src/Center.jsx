@@ -6,8 +6,8 @@ export default function Center(){
     return(
            <div>
              <Header mode={mode} setMode={setMode}/>
-            <sideBar/>
-           </div>
+                <sideBar></sideBar>
+               </div>
     )
 }
 
@@ -17,9 +17,9 @@ function Header({mode,setMode}) {
   
     <header className="App-header">
       
-      <div>r</div>
+      <div>Oku TicketingSystem</div>
       <div><div><span>Mode: </span><button className={mode ? "btnmodeSecond" : "btnmodefirst"}>Viewer</button><button className={mode ?  "btnmodefirst": "btnmodeSecond"}>Sender</button></div></div>
-      <div>r</div>
+      <div>Logged</div>
     </header>
   )
 }
@@ -27,9 +27,9 @@ function Header({mode,setMode}) {
 function sideBar(){
     return(
         <>
-        <div className="app-sideBar">
-qjhwdwqsd
-
+        <div className="appsideBar">
+d
+dkqwcfjwq eguvqewrg;e, rvgcewru,v.jcerhm ,jvcerhkgjvce
         </div>
         </>
     )
