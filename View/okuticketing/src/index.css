@@ -18,7 +18,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  
+
 }
 
 .btnmodefirst{
@@ -54,6 +54,42 @@
 }
 
 .appsideBar{
-background-color: aqua;
+height: 100vh;
+position: absolute;
+right: 0;
+left: 0;
+top: 40px;
+display: grid;
+grid-template-columns: 1fr 3fr 1fr;
+
 
 }
+
+.bnt-Ticket{
+  background-color: blue;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 10px;
+  color: white;
+  border: 1px solid;
+
+}
+
+.form-modal{
+  height: 100%;
+  background-color: rgb(185, 182, 189);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

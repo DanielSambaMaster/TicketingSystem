@@ -6,7 +6,7 @@ export default function Center(){
     return(
            <div>
              <Header mode={mode} setMode={setMode}/>
-                <sideBar></sideBar>
+                    <Sidebar></Sidebar>
                </div>
     )
 }
@@ -24,15 +24,37 @@ function Header({mode,setMode}) {
   )
 }
 
-function sideBar(){
+function Sidebar(){
     return(
         <>
         <div className="appsideBar">
-d
-dkqwcfjwq eguvqewrg;e, rvgcewru,v.jcerhm ,jvcerhkgjvce
+
+            <div><button className="bnt-Ticket">New Ticket</button></div>
+            <div><Form/></div>
+            <div>fr</div>
+
         </div>
         </>
     )
 }
 
 
+function Form(){
+    return(
+        <div className="form-modal">
+        <input></input>
+        <input></input>
+        <input></input>
+        <input></input>
+        <select></select>
+        <select></select>
+        <select></select>
+        <select></select>
+        <select></select>
+        <select></select>
+        <select></select>
+        <select></select>
+
+        </div>
+    )
+}
