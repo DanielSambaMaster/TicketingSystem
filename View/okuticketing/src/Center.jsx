@@ -51,9 +51,7 @@ function Form(){
         <select></select>
         <select></select>
         <select></select>
-        <select></select>
-        <select></select>
-        <select></select>
+     
 
         </div>
     )
