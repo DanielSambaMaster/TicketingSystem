@@ -1,95 +1,1437 @@
-.App-header{
-  height: 5vh;
-  display: grid;
-  box-shadow: 0px 1px 1px blue;
-  grid-template-columns: repeat(3, 1fr);
+.header {
+  height: 45px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   MODO
+========================= */
+
+.header-mode {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-left: 460px;
+}
+
+.mode-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.mode-switch {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.mode-button {
+  height: 100%;
+  min-width: 96px;
+
+  padding: 0 22px;
+
+  border: none;
+  background-color: transparent;
+
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.mode-button.active {
+  background-color: #1769e0;
+  color: #ffffff;
+  border-radius: 7px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.mode-button:hover:not(.active) {
+  background-color: #f8fafc;
+}
+
+/* =========================
+   AÇÕES
+========================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.notification-button {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: #1f2937;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease;
+}
+
+.notification-button:hover {
+  background-color: #f3f4f6;
+}
+
+.header-divider {
+  width: 1px;
+  height: 32px;
+
+  background-color: #e5e7eb;
+
+  margin: 0 16px;
+}
+
+/* =========================
+   PERFIL
+========================= */
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 6px 4px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.profile-avatar {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #6b9ee0;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+}
+
+.profile-arrow {
+  color: #374151;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+  .header-mode {
+    margin-left: 0;
+  }
+
+  .mode-label {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .profile-name {
+    display: none;
+  }
+
+  .mode-button {
+    min-width: 75px;
+    padding: 0 14px;
+  }
+
+  .header-divider {
+    margin: 0 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
   position: fixed;
+
   top: 0;
   left: 0;
-  right: 0;
 
+  width: 212px;
+  height: 100vh;
 
+  background-color: #ffffff;
+
+  border-right: 1px solid #e5e7eb;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 100;
 }
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebar-logo {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  box-sizing: border-box;
+}
+
+.logo-icon {
+  width: 26px;
+  height: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #1769e0;
+}
+
+.sidebar-logo span {
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #111827;
+
+  letter-spacing: -0.3px;
+}
+
+
+/* =========================
+   NOVO TICKET
+========================= */
+
+.sidebar-new-ticket {
+  padding: 20px 19px 14px;
+}
+
+.sidebar-new-ticket button {
+  width: 100%;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #1769e0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.2s ease,
+              transform 0.1s ease;
+}
+
+.sidebar-new-ticket button:hover {
+  background-color: #125bc5;
+}
+
+.sidebar-new-ticket button:active {
+  transform: scale(0.98);
+}
+
+.plus-icon {
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar-menu {
+  flex: 1;
+
+  padding: 5px 10px;
+
+  overflow-y: auto;
+}
+
+.menu-section {
+  margin-bottom: 22px;
+}
+
+.menu-section h3 {
+  margin: 0;
+
+  padding: 0 13px 9px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  color: #6b7280;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================
+   MENU ITEM
+========================= */
+
+.sidebar-item {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 13px;
+
+  margin-bottom: 2px;
+
+  border: none;
+  border-radius: 7px;
+
+  background-color: transparent;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #f3f6fa;
+
+  color: #1769e0;
+}
+
+.sidebar-item-icon {
+  width: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+
+  color: #4b5563;
+}
+
+.sidebar-item:hover .sidebar-item-icon {
+  color: #1769e0;
+}
+
+.sidebar-item-label {
+  white-space: nowrap;
+}
+
+
+/* =========================
+   LOGOUT
+========================= */
+
+.sidebar-logout {
+  padding: 12px 10px 18px;
+
+  border-top: 1px solid #f0f1f3;
+}
+
+.sidebar-logout button {
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 13px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition: all 0.2s ease;
+}
+
+.sidebar-logout button:hover {
+  background-color: #f3f4f6;
+
+  color: #dc2626;
+}
+
+.logout-icon {
+  width: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-logo {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .sidebar-logo > span {
+    display: none;
+  }
+
+  .sidebar-new-ticket {
+    padding: 15px 10px;
+  }
+
+  .sidebar-new-ticket button {
+    width: 45px;
+
+    margin: auto;
+  }
+
+  .sidebar-new-ticket button span:last-child {
+    display: none;
+  }
+
+  .sidebar-item {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .sidebar-item-label {
+    display: none;
+  }
+
+  .menu-section h3 {
+    display: none;
+  }
+
+  .sidebar-logout button {
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .sidebar-logout button span:last-child {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESET
+========================================= */
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-
 }
 
-.btnmodefirst{
-  background-color: rgb(0, 8, 255);
-  padding:3px 6px;
-  border-radius: 5px;
-  border: 2px solid blue;
-  color: white;
-  height: 25px;
-  width: 50px;
-  font-size: 11px;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
-.btnmodeSecond{
-  background-color: rgb(0, 8, 255);
-  padding:3px 6px;
-  border-radius: 5px;
-  border: 2px solid blue;
-  color: white;
-  height: 25px;
-  width: 50px;
-  font-size: 11px;
+
+button {
+  cursor: pointer;
 }
-.btnmodeSecond{
-    background-color: rgb(255, 255, 255);
-  padding:3px 6px;
+
+
+/* =========================================
+   LAYOUT PRINCIPAL
+========================================= */
+
+.ticket-dashboard {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.dashboard-content {
+  min-height: 100vh;
+  margin-left: 212px;
+}
+
+.dashboard-main {
+  padding: 24px;
+}
+
+
+/* =========================================
+   ÁREA DE TRABALHO
+========================================= */
+
+.ticket-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
+  gap: 18px;
+  align-items: start;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.new-ticket-card,
+.ticket-details-card,
+.my-tickets-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+
+/* =========================================
+   NOVO TICKET
+========================================= */
+
+.new-ticket-card {
+  padding: 20px 18px;
+}
+
+.card-header {
+  margin-bottom: 22px;
+}
+
+.card-header h1 {
+  margin: 0 0 6px;
+
+  color: #111827;
+
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.card-header p {
+  margin: 0;
+
+  color: #7b8492;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group label {
+  color: #1f2937;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.form-group label span {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 41px;
+
+  padding: 0 12px;
+
+  border: 1px solid #d9dee7;
+  border-radius: 7px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-group select {
+  appearance: auto;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1769e0;
+
+  box-shadow: 0 0 0 3px rgba(23, 105, 224, 0.08);
+}
+
+
+/* =========================================
+   EDITOR
+========================================= */
+
+.editor {
+  overflow: hidden;
+
+  border: 1px solid #d9dee7;
+  border-radius: 7px;
+
+  background: #ffffff;
+}
+
+.editor:focus-within {
+  border-color: #1769e0;
+
+  box-shadow: 0 0 0 3px rgba(23, 105, 224, 0.08);
+}
+
+.editor-toolbar {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 2px;
+
+  padding: 0 8px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  background: #ffffff;
+}
+
+.editor-toolbar select {
+  height: 30px;
+
+  margin-right: 8px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-size: 12px;
+}
+
+.editor-toolbar button {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
   border-radius: 5px;
-  border: 1px solid blue;
-  color: rgb(0, 30, 255);
-  height: 23px;
-  width: 50px;
-  margin: 1px;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-size: 14px;
+}
+
+.editor-toolbar button:hover {
+  background: #f1f5f9;
+}
+
+.editor textarea {
+  display: block;
+
+  width: 100%;
+  height: 105px;
+
+  padding: 14px;
+
+  resize: vertical;
+
+  border: none;
+  outline: none;
+
+  color: #374151;
+
+  font-size: 13px;
+}
+
+.editor textarea::placeholder {
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   UPLOAD
+========================================= */
+
+.upload-area {
+  min-height: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  border: 1px dashed #d4dae3;
+  border-radius: 7px;
+
+  background: #fafbfc;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.upload-area:hover {
+  border-color: #1769e0;
+  background: #f8fbff;
+}
+
+.upload-icon {
+  margin-bottom: 2px;
+
+  color: #64748b;
+
+  font-size: 18px;
+}
+
+.upload-area p {
+  margin: 0 0 3px;
+
+  color: #4b5563;
+
+  font-size: 12px;
+}
+
+.upload-area span {
+  color: #9ca3af;
+
   font-size: 10px;
 }
 
-.appsideBar{
-height: 100vh;
-position: absolute;
-right: 0;
-left: 0;
-top: 40px;
-display: grid;
-grid-template-columns: 1fr 3fr 1fr;
 
+/* =========================================
+   BOTÕES DO FORMULÁRIO
+========================================= */
 
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 2px;
 }
 
-.bnt-Ticket{
-  background-color: blue;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 10px;
-  color: white;
-  border: 1px solid;
+.cancel-button,
+.create-button {
+  height: 38px;
 
+  padding: 0 22px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 500;
 }
 
-.form-modal{
-  height: 100%;
-  background-color: rgb(185, 182, 189);
+.cancel-button {
+  border: 1px solid #d9dee7;
+
+  background: #ffffff;
+
+  color: #4b5563;
+}
+
+.cancel-button:hover {
+  background: #f8fafc;
+}
+
+.create-button {
+  border: 1px solid #1769e0;
+
+  background: #1769e0;
+
+  color: #ffffff;
+}
+
+.create-button:hover {
+  background: #125bc5;
 }
 
 
+/* =========================================
+   DETALHES DO TICKET
+========================================= */
+
+.ticket-details-card {
+  overflow: hidden;
+}
+
+.ticket-title {
+  padding: 20px 20px 18px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ticket-title > div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+}
+
+.ticket-id {
+  color: #1769e0;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 6px;
+
+  background: #e6f7ef;
+
+  color: #14804a;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.ticket-title h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 15px;
+  font-weight: 600;
+}
 
 
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.ticket-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  padding: 20px;
+}
+
+.info-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.info-column + .info-column {
+  padding-left: 24px;
+
+  border-left: 1px solid #edf0f4;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.info-item span {
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+.info-item strong {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.info-item .priority {
+  color: #f59e0b;
+}
+
+.info-item .status-text {
+  color: #14804a;
+}
 
 
+/* =========================================
+   TABS
+========================================= */
+
+.ticket-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  padding: 0 10px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ticket-tabs button {
+  position: relative;
+
+  height: 48px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ticket-tabs button.active {
+  color: #1769e0;
+}
+
+.ticket-tabs button.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 2px;
+
+  background: #1769e0;
+}
 
 
+/* =========================================
+   ATIVIDADES
+========================================= */
+
+.activities {
+  padding: 0 12px;
+}
+
+.activity {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 13px 8px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.activity-avatar {
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #6b9ee0;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-bottom: 6px;
+}
+
+.activity-header strong {
+  color: #1f2937;
+
+  font-size: 11px;
+}
+
+.activity-header span {
+  color: #6b7280;
+
+  font-size: 11px;
+}
+
+.activity-header time {
+  margin-left: auto;
+
+  color: #9ca3af;
+
+  font-size: 10px;
+}
+
+.activity-content p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
 
 
+/* =========================================
+   RESPOSTA
+========================================= */
+
+.reply-box {
+  margin: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #d9dee7;
+  border-radius: 7px;
+}
+
+.reply-box textarea {
+  display: block;
+
+  width: 100%;
+  height: 55px;
+
+  padding: 12px;
+
+  resize: none;
+
+  border: none;
+  outline: none;
+
+  color: #374151;
+
+  font-size: 12px;
+}
+
+.reply-box textarea::placeholder {
+  color: #9ca3af;
+}
+
+.reply-footer {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8px;
+
+  border-top: 1px solid #edf0f4;
+}
+
+.attach-button {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+.attach-button:hover {
+  color: #1769e0;
+}
+
+.send-button {
+  height: 30px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #1769e0;
+
+  color: #ffffff;
+
+  font-size: 11px;
+}
+
+.send-button:hover {
+  background: #125bc5;
+}
 
 
+/* =========================================
+   MEUS TICKETS
+========================================= */
+
+.my-tickets-card {
+  margin-top: 18px;
+
+  overflow: hidden;
+}
+
+.my-tickets-header {
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.my-tickets-header h2 {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.my-tickets-header button {
+  height: 31px;
+
+  padding: 0 13px;
+
+  border: 1px solid #d9dee7;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #374151;
+
+  font-size: 11px;
+}
+
+.my-tickets-header button:hover {
+  background: #f8fafc;
+}
 
 
+/* =========================================
+   TABELA
+========================================= */
+
+.tickets-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.tickets-table-wrapper table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  white-space: nowrap;
+}
+
+.tickets-table-wrapper th {
+  height: 42px;
+
+  padding: 0 12px;
+
+  background: #fafbfc;
+
+  color: #6b7280;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  text-align: left;
+}
+
+.tickets-table-wrapper td {
+  height: 52px;
+
+  padding: 0 12px;
+
+  border-top: 1px solid #edf0f4;
+
+  color: #4b5563;
+
+  font-size: 11px;
+}
+
+.tickets-table-wrapper tbody tr:hover {
+  background: #fafcff;
+}
+
+.tickets-table-wrapper td:first-child {
+  color: #374151;
+
+  font-weight: 500;
+}
+
+.tickets-table-wrapper .status-badge {
+  font-size: 10px;
+}
+
+
+/* =========================================
+   AÇÕES DA TABELA
+========================================= */
+
+.action-button {
+  width: 30px;
+  height: 30px;
+
+  margin-right: 4px;
+
+  border: 1px solid #e1e5eb;
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #4b5563;
+
+  font-size: 13px;
+}
+
+.action-button:hover {
+  border-color: #1769e0;
+
+  color: #1769e0;
+
+  background: #f8fbff;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .ticket-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-details-card {
+    min-height: auto;
+  }
+}
+
+
+@media (max-width: 900px) {
+
+  .dashboard-content {
+    margin-left: 70px;
+  }
+
+  .dashboard-main {
+    padding: 18px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .dashboard-main {
+    padding: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ticket-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .info-column + .info-column {
+    padding-left: 0;
+
+    padding-top: 18px;
+
+    border-left: none;
+    border-top: 1px solid #edf0f4;
+  }
+
+  .activity-header {
+    flex-wrap: wrap;
+  }
+
+  .activity-header time {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-button,
+  .create-button {
+    width: 100%;
+  }
+}

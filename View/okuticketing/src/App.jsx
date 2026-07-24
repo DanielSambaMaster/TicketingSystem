@@ -1,10 +1,11 @@
-import './App.css'
-import Center from './Center'
+import Header from './Components/Header'
+import TicketDashboard from './Pages/TickectDash'
 function App() {
 
 
   return (
-   <Center/>
+
+<TicketDashboard/>
   )
 }
 
